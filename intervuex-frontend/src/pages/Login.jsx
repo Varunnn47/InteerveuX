@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../Context/AuthContext";
 
 export default function Login() {
   const navigate = useNavigate();
+  const { login } = useContext(AuthContext);
   const [isRegister, setIsRegister] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -21,13 +23,13 @@ export default function Login() {
     if (isRegister) {
       // Register logic → call backend API
       const user = { name, email };
-      localStorage.setItem("user", JSON.stringify(user));
+      login(user);
       alert("Registration successful!");
       navigate("/dashboard");
     } else {
       // Login logic → call backend API
       const user = { name: "John Doe", email }; // Example user
-      localStorage.setItem("user", JSON.stringify(user));
+      login(user);
       alert("Login successful!");
       navigate("/dashboard");
     }

@@ -11,6 +11,7 @@ import Interview from "./pages/Interview";
 import Results from "./pages/Results";
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 import FAQ from "./pages/FAQ";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             {/* Public Pages */}
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
 
             {/* Protected Pages */}
             <Route

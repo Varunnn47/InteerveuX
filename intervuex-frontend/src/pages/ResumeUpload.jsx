@@ -29,7 +29,8 @@ export default function ResumeAnalyzer() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto mt-20 p-8 bg-white shadow-lg rounded-lg">
+    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="max-w-4xl w-full p-8 bg-white shadow-lg rounded-lg">
       <h1 className="text-3xl font-bold text-blue-600 mb-6 text-center">
         📄 Resume Analyzer
       </h1>
@@ -65,6 +66,7 @@ export default function ResumeAnalyzer() {
           </div>
         </div>
       )}
+      </div>
     </div>
   );
 }
